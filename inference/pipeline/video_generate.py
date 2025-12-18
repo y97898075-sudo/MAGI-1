@@ -72,7 +72,7 @@ def _process_null_embeddings(
     if negative_special_token_keys:
         null_embs, _ = pad_special_token(negative_special_token_keys, null_embs, None)
 
-    null_token_length = 50
+    null_token_length = 9999999
     null_emb_masks[:, :, :null_token_length] = 1
     null_emb_masks[:, :, null_token_length:] = 0
 
